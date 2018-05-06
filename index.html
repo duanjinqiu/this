@@ -242,6 +242,153 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/06/nodemon监控vue-cli下面config配置自动重启webpack-dev-server/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="duan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516969606604&di=ab881e6d0350eae06421558c03536a58&imgtype=jpg&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D1121475478%2C2545730346%26fm%3D214%26gp%3D0.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/06/nodemon监控vue-cli下面config配置自动重启webpack-dev-server/" itemprop="url">nodemon监控vue-cli下面config配置自动重启webpack-dev-server</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-06T10:24:09+08:00">
+                2018-05-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>需要全局安装nodemon</p>
+<p>yarn global add nodemon</p>
+<p>创建配置文件nodemon.json,文件内容如下：</p>
+<pre><code>{
+&quot;restartable&quot;:&quot;rs&quot;,//重启的命令，默认是 rs
+&quot;ignore&quot;:[&quot;&quot;],//忽略的文件后缀名或者文件夹，文件路径的书写用相对于 nodemon.json 所在位置的相对路径
+&quot;verbose&quot;: true, //表示输出详细启动与重启信息
+&quot;execMap&quot;:{
+    &quot;js&quot;:&quot;yarn run dev&quot;,
+    &quot;test&quot;: &quot;gulp test&quot;
+},
+&quot;events&quot;:{
+    &quot;start&quot;:&quot;gulp&quot;, //子进程（即监控的应用）启动
+    &quot;crash&quot;:&quot;&quot;,  //子进程崩溃，不会触发 exit
+    &quot;exit&quot;:&quot;&quot;, //子进程完全退出，不是非正常的崩溃
+    &quot;restart&quot;:&quot;gulp&quot;, //子进程重启
+},
+&quot;ext&quot;: &quot;js json&quot;,//监控指定后缀名的文件，用空格间隔。默认监控的后缀文件：.js, .coffee, .litcoffee, .json。但是对于没有文件后缀的文件，比如 www 文件，我暂时找不到怎么用 nodemon 去监控，就算在 watch 中包含了，nodemon 也会忽略掉
+&quot;watch&quot;:[
+    &quot;./src/**&quot;
+],
+&quot;env&quot;:{
+    &quot;NODE_ENV&quot;:&quot;env&quot;, //  env： 是开发环境; 运行环境 development; production 是生产环境
+    &quot;PORT&quot;:&quot;3000&quot;
+},
+&quot;legacy-watch&quot;:false //nodemon 使用 Chokidar 作为底层监控系统，但是如果监控失效，或者提示没有需要监控的文件时，就需要使用轮询模式（polling mode），即设置 legacy-watch 为 true，也可以在命令行中指定
+
+}
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/27/forever常用命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -915,7 +1062,7 @@ forever list
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

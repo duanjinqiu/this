@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="getComputedStyle()方法会获取元素计算后的样式，它获取的是只读属性，无法被改变。 position: absolute;属性会改变元素的display属性。比如会把行内元素改为块级元素。这个时候用getComputedStyle()方法获取行内元素的display属性的时候就是block了。用.style.display获取的依然是一个行内元素">
+<meta name="description" content="需要全局安装nodemon yarn global add nodemon 创建配置文件nodemon.json,文件内容如下： { &amp;quot;restartable&amp;quot;:&amp;quot;rs&amp;quot;,//重启的命令，默认是 rs &amp;quot;ignore&amp;quot;:[&amp;quot;&amp;quot;],//忽略的文件后缀名或者文件夹，文件路径的书写用相对于 nodemon.json 所在位置">
 <meta property="og:type" content="article">
-<meta property="og:title" content="getComputedStyle()方法">
-<meta property="og:url" content="http://yoursite.com/2018/01/26/getComputedStyle-方法/index.html">
+<meta property="og:title" content="nodemon监控vue-cli下面config配置自动重启webpack-dev-server">
+<meta property="og:url" content="http://yoursite.com/2018/05/06/nodemon监控vue-cli下面config配置自动重启webpack-dev-server/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="getComputedStyle()方法会获取元素计算后的样式，它获取的是只读属性，无法被改变。 position: absolute;属性会改变元素的display属性。比如会把行内元素改为块级元素。这个时候用getComputedStyle()方法获取行内元素的display属性的时候就是block了。用.style.display获取的依然是一个行内元素">
+<meta property="og:description" content="需要全局安装nodemon yarn global add nodemon 创建配置文件nodemon.json,文件内容如下： { &amp;quot;restartable&amp;quot;:&amp;quot;rs&amp;quot;,//重启的命令，默认是 rs &amp;quot;ignore&amp;quot;:[&amp;quot;&amp;quot;],//忽略的文件后缀名或者文件夹，文件路径的书写用相对于 nodemon.json 所在位置">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-26T15:51:27.671Z">
+<meta property="og:updated_time" content="2018-05-06T02:32:49.480Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="getComputedStyle()方法">
-<meta name="twitter:description" content="getComputedStyle()方法会获取元素计算后的样式，它获取的是只读属性，无法被改变。 position: absolute;属性会改变元素的display属性。比如会把行内元素改为块级元素。这个时候用getComputedStyle()方法获取行内元素的display属性的时候就是block了。用.style.display获取的依然是一个行内元素">
+<meta name="twitter:title" content="nodemon监控vue-cli下面config配置自动重启webpack-dev-server">
+<meta name="twitter:description" content="需要全局安装nodemon yarn global add nodemon 创建配置文件nodemon.json,文件内容如下： { &amp;quot;restartable&amp;quot;:&amp;quot;rs&amp;quot;,//重启的命令，默认是 rs &amp;quot;ignore&amp;quot;:[&amp;quot;&amp;quot;],//忽略的文件后缀名或者文件夹，文件路径的书写用相对于 nodemon.json 所在位置">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/26/getComputedStyle-方法/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/06/nodemon监控vue-cli下面config配置自动重启webpack-dev-server/"/>
 
 
 
 
 
-  <title>getComputedStyle()方法 | </title>
+  <title>nodemon监控vue-cli下面config配置自动重启webpack-dev-server | </title>
   
 
 
@@ -242,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/26/getComputedStyle-方法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/06/nodemon监控vue-cli下面config配置自动重启webpack-dev-server/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="duan">
@@ -259,7 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">getComputedStyle()方法</h1>
+          <h1 class="post-title" itemprop="name headline">nodemon监控vue-cli下面config配置自动重启webpack-dev-server</h1>
         
 
         <div class="post-meta">
@@ -271,8 +271,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-26T23:06:55+08:00">
-                2018-01-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-06T10:24:09+08:00">
+                2018-05-06
               </time>
             
 
@@ -309,11 +309,35 @@
       
 
       
-        <ol>
-<li><font style="font-weight: 600">getComputedStyle()方法会获取元素计算后的样式，它获取的是只读属性，无法被改变。</font></li>
-<li>position: absolute;属性会改变元素的display属性。比如会把行内元素改为块级元素。这个时候用getComputedStyle()方法获取行内元素的display属性的时候就是block了。用.style.display获取的依然是一个行内元素</li>
-</ol>
+        <p>需要全局安装nodemon</p>
+<p>yarn global add nodemon</p>
+<p>创建配置文件nodemon.json,文件内容如下：</p>
+<pre><code>{
+&quot;restartable&quot;:&quot;rs&quot;,//重启的命令，默认是 rs
+&quot;ignore&quot;:[&quot;&quot;],//忽略的文件后缀名或者文件夹，文件路径的书写用相对于 nodemon.json 所在位置的相对路径
+&quot;verbose&quot;: true, //表示输出详细启动与重启信息
+&quot;execMap&quot;:{
+    &quot;js&quot;:&quot;yarn run dev&quot;,
+    &quot;test&quot;: &quot;gulp test&quot;
+},
+&quot;events&quot;:{
+    &quot;start&quot;:&quot;gulp&quot;, //子进程（即监控的应用）启动
+    &quot;crash&quot;:&quot;&quot;,  //子进程崩溃，不会触发 exit
+    &quot;exit&quot;:&quot;&quot;, //子进程完全退出，不是非正常的崩溃
+    &quot;restart&quot;:&quot;gulp&quot;, //子进程重启
+},
+&quot;ext&quot;: &quot;js json&quot;,//监控指定后缀名的文件，用空格间隔。默认监控的后缀文件：.js, .coffee, .litcoffee, .json。但是对于没有文件后缀的文件，比如 www 文件，我暂时找不到怎么用 nodemon 去监控，就算在 watch 中包含了，nodemon 也会忽略掉
+&quot;watch&quot;:[
+    &quot;./src/**&quot;
+],
+&quot;env&quot;:{
+    &quot;NODE_ENV&quot;:&quot;env&quot;, //  env： 是开发环境; 运行环境 development; production 是生产环境
+    &quot;PORT&quot;:&quot;3000&quot;
+},
+&quot;legacy-watch&quot;:false //nodemon 使用 Chokidar 作为底层监控系统，但是如果监控失效，或者提示没有需要监控的文件时，就需要使用轮询模式（polling mode），即设置 legacy-watch 为 true，也可以在命令行中指定
 
+}
+</code></pre>
       
     </div>
     
@@ -337,8 +361,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/26/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/04/27/forever常用命令/" rel="next" title="forever常用命令">
+                <i class="fa fa-chevron-left"></i> forever常用命令
               </a>
             
           </div>
@@ -346,10 +370,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/22/gitignore无法忽略已经被提交过了的文件的解决方案/" rel="prev" title=".gitignore无法忽略已经被提交过了的文件的解决方案">
-                .gitignore无法忽略已经被提交过了的文件的解决方案 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
