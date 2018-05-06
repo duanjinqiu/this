@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="需要全局安装nodemon yarn global add nodemon 创建配置文件nodemon.json,文件内容如下： { &amp;quot;restartable&amp;quot;:&amp;quot;rs&amp;quot;,//重启的命令，默认是 rs &amp;quot;ignore&amp;quot;:[&amp;quot;&amp;quot;],//忽略的文件后缀名或者文件夹，文件路径的书写用相对于 nodemon.json 所在位置">
+<meta name="description" content="1.需要全局安装nodemon yarn global add nodemon 2.创建配置文件nodemon.json,文件内容如下： { &amp;quot;restartable&amp;quot;:&amp;quot;rs&amp;quot;,//重启的命令，默认是 rs &amp;quot;ignore&amp;quot;:[     &amp;quot;.git&amp;quot;,      &amp;quot;node_modules/**/node_">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nodemon监控vue-cli下面config配置自动重启webpack-dev-server">
 <meta property="og:url" content="http://yoursite.com/2018/05/06/nodemon监控vue-cli下面config配置自动重启webpack-dev-server/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="需要全局安装nodemon yarn global add nodemon 创建配置文件nodemon.json,文件内容如下： { &amp;quot;restartable&amp;quot;:&amp;quot;rs&amp;quot;,//重启的命令，默认是 rs &amp;quot;ignore&amp;quot;:[&amp;quot;&amp;quot;],//忽略的文件后缀名或者文件夹，文件路径的书写用相对于 nodemon.json 所在位置">
+<meta property="og:description" content="1.需要全局安装nodemon yarn global add nodemon 2.创建配置文件nodemon.json,文件内容如下： { &amp;quot;restartable&amp;quot;:&amp;quot;rs&amp;quot;,//重启的命令，默认是 rs &amp;quot;ignore&amp;quot;:[     &amp;quot;.git&amp;quot;,      &amp;quot;node_modules/**/node_">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-06T02:33:54.991Z">
+<meta property="og:updated_time" content="2018-05-06T02:47:40.011Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nodemon监控vue-cli下面config配置自动重启webpack-dev-server">
-<meta name="twitter:description" content="需要全局安装nodemon yarn global add nodemon 创建配置文件nodemon.json,文件内容如下： { &amp;quot;restartable&amp;quot;:&amp;quot;rs&amp;quot;,//重启的命令，默认是 rs &amp;quot;ignore&amp;quot;:[&amp;quot;&amp;quot;],//忽略的文件后缀名或者文件夹，文件路径的书写用相对于 nodemon.json 所在位置">
+<meta name="twitter:description" content="1.需要全局安装nodemon yarn global add nodemon 2.创建配置文件nodemon.json,文件内容如下： { &amp;quot;restartable&amp;quot;:&amp;quot;rs&amp;quot;,//重启的命令，默认是 rs &amp;quot;ignore&amp;quot;:[     &amp;quot;.git&amp;quot;,      &amp;quot;node_modules/**/node_">
 
 
 
@@ -309,12 +309,14 @@
       
 
       
-        <p>需要全局安装nodemon</p>
+        <p>1.需要全局安装nodemon</p>
 <pre><code>yarn global add nodemon
-</code></pre><p>创建配置文件nodemon.json,文件内容如下：</p>
+</code></pre><p>2.创建配置文件nodemon.json,文件内容如下：</p>
 <pre><code>{
 &quot;restartable&quot;:&quot;rs&quot;,//重启的命令，默认是 rs
-&quot;ignore&quot;:[&quot;&quot;],//忽略的文件后缀名或者文件夹，文件路径的书写用相对于 nodemon.json 所在位置的相对路径
+&quot;ignore&quot;:[
+    &quot;.git&quot;, 
+    &quot;node_modules/**/node_modules&quot;],//忽略的文件后缀名或者文件夹，文件路径的书写用相对于 nodemon.json 所在位置的相对路径
 &quot;verbose&quot;: true, //表示输出详细启动与重启信息
 &quot;execMap&quot;:{
     &quot;js&quot;:&quot;yarn run dev&quot;,
@@ -328,7 +330,7 @@
 },
 &quot;ext&quot;: &quot;js json&quot;,//监控指定后缀名的文件，用空格间隔。默认监控的后缀文件：.js, .coffee, .litcoffee, .json。但是对于没有文件后缀的文件，比如 www 文件，我暂时找不到怎么用 nodemon 去监控，就算在 watch 中包含了，nodemon 也会忽略掉
 &quot;watch&quot;:[
-    &quot;./src/**&quot;
+    &quot;./config/&quot; //监控当前相对路径下面的config文件夹下所有的文件。上面配置的为js文件改变后启用yarn run dev命令
 ],
 &quot;env&quot;:{
     &quot;NODE_ENV&quot;:&quot;env&quot;, //  env： 是开发环境; 运行环境 development; production 是生产环境
@@ -336,8 +338,15 @@
 },
 &quot;legacy-watch&quot;:false //nodemon 使用 Chokidar 作为底层监控系统，但是如果监控失效，或者提示没有需要监控的文件时，就需要使用轮询模式（polling mode），即设置 legacy-watch 为 true，也可以在命令行中指定
 
+}   
+</code></pre><p>3.之后在package.json中的加入下面一句</p>
+<pre><code>scripts: {
+    &quot;nodemon&quot;: &quot;nodemon&quot;
 }
-</code></pre>
+</code></pre><p>4.然后就可以</p>
+<pre><code>yarn run nodemon
+</code></pre><p>启动nodemon，就可以了</p>
+
       
     </div>
     
