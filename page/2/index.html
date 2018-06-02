@@ -79,17 +79,16 @@
 
 
 
-<meta name="description" content="REG ADD &amp;quot;HKCU\Control Panel\Desktop&amp;quot; /v DpiScalingVer /t REG_DWORD /d 0x00001018 /f  REG ADD &amp;quot;HKCU\Control Panel\Desktop&amp;quot; /v Win8DpiScaling /t REG_DWORD /d 0x00000001 /f  REG ADD &amp;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="win10放大125%界面模糊的解决方法">
-<meta property="og:url" content="http://yoursite.com/2018/06/02/win10放大125-界面模糊的解决方法/index.html">
+<meta name="description" content="欢迎来到我的站点">
+<meta property="og:type" content="website">
+<meta property="og:title">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="REG ADD &amp;quot;HKCU\Control Panel\Desktop&amp;quot; /v DpiScalingVer /t REG_DWORD /d 0x00001018 /f  REG ADD &amp;quot;HKCU\Control Panel\Desktop&amp;quot; /v Win8DpiScaling /t REG_DWORD /d 0x00000001 /f  REG ADD &amp;">
+<meta property="og:description" content="欢迎来到我的站点">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-02T05:37:01.252Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="win10放大125%界面模糊的解决方法">
-<meta name="twitter:description" content="REG ADD &amp;quot;HKCU\Control Panel\Desktop&amp;quot; /v DpiScalingVer /t REG_DWORD /d 0x00001018 /f  REG ADD &amp;quot;HKCU\Control Panel\Desktop&amp;quot; /v Win8DpiScaling /t REG_DWORD /d 0x00000001 /f  REG ADD &amp;">
+<meta name="twitter:title">
+<meta name="twitter:description" content="欢迎来到我的站点">
 
 
 
@@ -119,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/02/win10放大125-界面模糊的解决方法/"/>
+  <link rel="canonical" href="http://yoursite.com/page/2/"/>
 
 
 
 
 
-  <title>win10放大125%界面模糊的解决方法 | </title>
+  <title></title>
   
 
 
@@ -144,7 +143,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -227,9 +227,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -242,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/02/win10放大125-界面模糊的解决方法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/26/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="duan">
@@ -259,7 +259,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">win10放大125%界面模糊的解决方法</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/26/hello-world/" itemprop="url">Hello World</a></h1>
         
 
         <div class="post-meta">
@@ -271,8 +273,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-02T13:18:18+08:00">
-                2018-06-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-26T12:54:16+08:00">
+                2018-01-26
               </time>
             
 
@@ -309,16 +311,20 @@
       
 
       
-        <pre><code>REG ADD &quot;HKCU\Control Panel\Desktop&quot; /v DpiScalingVer /t REG_DWORD /d 0x00001018 /f 
-REG ADD &quot;HKCU\Control Panel\Desktop&quot; /v Win8DpiScaling /t REG_DWORD /d 0x00000001 /f 
-REG ADD &quot;HKCU\Control Panel\Desktop&quot; /v LogPixels /t REG_DWORD /d 0x00000078 /f
-</code></pre><p>将以上文本复制到记事本中，修改DPI_FIX.cmd</p>
-<p>win+R 打开gpedit.msc，用户配置-windows设置-脚本(登录/注销)，双击登录，打开默认的文件夹</p>
-<pre><code>C:\Windows\System32\GroupPolicy\User\Scripts\Logon
-</code></pre><p>我把刚才保存的DPI_FIX.cmd放入到这个文件夹中。最后保存</p>
-<p>为什么要把cmd放到登录脚本呢?一般的教程是放到启动文件夹，这样只能保证在window启动的时候自动运行cmd脚本。当计算机睡眠，注销的时候，放到启动中的脚本并不会运行，所以把这个放到登录脚本就可以了</p>
-<p>上面的语句第一句不知道什么意思。第二句把dpi模式设置为win8的传统模式，第三句设置缩放大小</p>
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
+          
+        
       
     </div>
     
@@ -335,32 +341,12 @@ REG ADD &quot;HKCU\Control Panel\Desktop&quot; /v LogPixels /t REG_DWORD /d 0x00
       
 
       
-      
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/05/30/改变谷歌浏览器记住密码后input框黄色背景/" rel="next" title="改变谷歌浏览器记住密码后input框黄色背景">
-                <i class="fa fa-chevron-left"></i> 改变谷歌浏览器记住密码后input框黄色背景
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/02/win10连接服务器提示要求的函数不受支持/" rel="prev" title="win10连接服务器提示要求的函数不受支持">
-                win10连接服务器提示要求的函数不受支持 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -370,11 +356,14 @@ REG ADD &quot;HKCU\Control Panel\Desktop&quot; /v LogPixels /t REG_DWORD /d 0x00
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -382,10 +371,6 @@ REG ADD &quot;HKCU\Control Panel\Desktop&quot; /v LogPixels /t REG_DWORD /d 0x00
 
 
           
-
-  
-
-
 
         </div>
         
@@ -593,10 +578,6 @@ REG ADD &quot;HKCU\Control Panel\Desktop&quot; /v LogPixels /t REG_DWORD /d 0x00
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 

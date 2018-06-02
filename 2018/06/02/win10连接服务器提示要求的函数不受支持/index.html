@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="REG ADD &amp;quot;HKCU\Control Panel\Desktop&amp;quot; /v DpiScalingVer /t REG_DWORD /d 0x00001018 /f  REG ADD &amp;quot;HKCU\Control Panel\Desktop&amp;quot; /v Win8DpiScaling /t REG_DWORD /d 0x00000001 /f  REG ADD &amp;">
+<meta name="description" content="Win10远程桌面出现身份验证错误，要求的函数不受支持，这可能是由于CredSSP加密Oracle修正解决方法 REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters /v AllowEncryptionOracle /t REG_DWORD /d">
 <meta property="og:type" content="article">
-<meta property="og:title" content="win10放大125%界面模糊的解决方法">
-<meta property="og:url" content="http://yoursite.com/2018/06/02/win10放大125-界面模糊的解决方法/index.html">
+<meta property="og:title" content="win10连接服务器提示要求的函数不受支持">
+<meta property="og:url" content="http://yoursite.com/2018/06/02/win10连接服务器提示要求的函数不受支持/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="REG ADD &amp;quot;HKCU\Control Panel\Desktop&amp;quot; /v DpiScalingVer /t REG_DWORD /d 0x00001018 /f  REG ADD &amp;quot;HKCU\Control Panel\Desktop&amp;quot; /v Win8DpiScaling /t REG_DWORD /d 0x00000001 /f  REG ADD &amp;">
+<meta property="og:description" content="Win10远程桌面出现身份验证错误，要求的函数不受支持，这可能是由于CredSSP加密Oracle修正解决方法 REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters /v AllowEncryptionOracle /t REG_DWORD /d">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-02T05:37:01.252Z">
+<meta property="og:updated_time" content="2018-06-02T05:52:37.206Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="win10放大125%界面模糊的解决方法">
-<meta name="twitter:description" content="REG ADD &amp;quot;HKCU\Control Panel\Desktop&amp;quot; /v DpiScalingVer /t REG_DWORD /d 0x00001018 /f  REG ADD &amp;quot;HKCU\Control Panel\Desktop&amp;quot; /v Win8DpiScaling /t REG_DWORD /d 0x00000001 /f  REG ADD &amp;">
+<meta name="twitter:title" content="win10连接服务器提示要求的函数不受支持">
+<meta name="twitter:description" content="Win10远程桌面出现身份验证错误，要求的函数不受支持，这可能是由于CredSSP加密Oracle修正解决方法 REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters /v AllowEncryptionOracle /t REG_DWORD /d">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/02/win10放大125-界面模糊的解决方法/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/02/win10连接服务器提示要求的函数不受支持/"/>
 
 
 
 
 
-  <title>win10放大125%界面模糊的解决方法 | </title>
+  <title>win10连接服务器提示要求的函数不受支持 | </title>
   
 
 
@@ -242,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/02/win10放大125-界面模糊的解决方法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/02/win10连接服务器提示要求的函数不受支持/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="duan">
@@ -259,7 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">win10放大125%界面模糊的解决方法</h1>
+          <h1 class="post-title" itemprop="name headline">win10连接服务器提示要求的函数不受支持</h1>
         
 
         <div class="post-meta">
@@ -271,7 +271,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-02T13:18:18+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-02T13:47:25+08:00">
                 2018-06-02
               </time>
             
@@ -309,15 +309,12 @@
       
 
       
-        <pre><code>REG ADD &quot;HKCU\Control Panel\Desktop&quot; /v DpiScalingVer /t REG_DWORD /d 0x00001018 /f 
-REG ADD &quot;HKCU\Control Panel\Desktop&quot; /v Win8DpiScaling /t REG_DWORD /d 0x00000001 /f 
-REG ADD &quot;HKCU\Control Panel\Desktop&quot; /v LogPixels /t REG_DWORD /d 0x00000078 /f
-</code></pre><p>将以上文本复制到记事本中，修改DPI_FIX.cmd</p>
-<p>win+R 打开gpedit.msc，用户配置-windows设置-脚本(登录/注销)，双击登录，打开默认的文件夹</p>
-<pre><code>C:\Windows\System32\GroupPolicy\User\Scripts\Logon
-</code></pre><p>我把刚才保存的DPI_FIX.cmd放入到这个文件夹中。最后保存</p>
-<p>为什么要把cmd放到登录脚本呢?一般的教程是放到启动文件夹，这样只能保证在window启动的时候自动运行cmd脚本。当计算机睡眠，注销的时候，放到启动中的脚本并不会运行，所以把这个放到登录脚本就可以了</p>
-<p>上面的语句第一句不知道什么意思。第二句把dpi模式设置为win8的传统模式，第三句设置缩放大小</p>
+        <p>Win10远程桌面出现身份验证错误，要求的函数不受支持，这可能是由于CredSSP加密Oracle修正解决方法</p>
+<pre><code>REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters /v AllowEncryptionOracle /t REG_DWORD /d 2 /f
+</code></pre><p>记事本保存，修改后缀名cmd，管理员身份运行。</p>
+<p>意思就是把注册表的的AllowEncryptionOracle的值修改为1，相当于下面这种操作</p>
+<p>计算机配置&gt;管理模板&gt;系统&gt;凭据分配&gt;加密Oracle修正<br>把选项修改为易受攻击</p>
+<p>最新的win10把这个连接远程服务器的安全策略提高了，所以出现了这个提示，要想恢复以前的没有这种提示的，只要把已缓解修改为易受攻击就可以了</p>
 
       
     </div>
@@ -342,8 +339,8 @@ REG ADD &quot;HKCU\Control Panel\Desktop&quot; /v LogPixels /t REG_DWORD /d 0x00
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/30/改变谷歌浏览器记住密码后input框黄色背景/" rel="next" title="改变谷歌浏览器记住密码后input框黄色背景">
-                <i class="fa fa-chevron-left"></i> 改变谷歌浏览器记住密码后input框黄色背景
+              <a href="/2018/06/02/win10放大125-界面模糊的解决方法/" rel="next" title="win10放大125%界面模糊的解决方法">
+                <i class="fa fa-chevron-left"></i> win10放大125%界面模糊的解决方法
               </a>
             
           </div>
@@ -351,10 +348,6 @@ REG ADD &quot;HKCU\Control Panel\Desktop&quot; /v LogPixels /t REG_DWORD /d 0x00
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/02/win10连接服务器提示要求的函数不受支持/" rel="prev" title="win10连接服务器提示要求的函数不受支持">
-                win10连接服务器提示要求的函数不受支持 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
