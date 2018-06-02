@@ -242,6 +242,134 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/02/win10放大125-界面模糊的解决方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="duan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516969606604&di=ab881e6d0350eae06421558c03536a58&imgtype=jpg&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D1121475478%2C2545730346%26fm%3D214%26gp%3D0.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/02/win10放大125-界面模糊的解决方法/" itemprop="url">win10放大125%界面模糊的解决方法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-02T13:18:18+08:00">
+                2018-06-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <pre><code>REG ADD &quot;HKCU\Control Panel\Desktop&quot; /v DpiScalingVer /t REG_DWORD /d 0x00001018 /f 
+REG ADD &quot;HKCU\Control Panel\Desktop&quot; /v Win8DpiScaling /t REG_DWORD /d 0x00000001 /f 
+REG ADD &quot;HKCU\Control Panel\Desktop&quot; /v LogPixels /t REG_DWORD /d 0x00000078 /f
+</code></pre><p>将以上文本复制到记事本中，修改DPI_FIX.cmd</p>
+<p>win+R 打开gpedit.msc，用户配置-windows设置-脚本(登录/注销)，双击登录，打开默认的文件夹</p>
+<pre><code>C:\Windows\System32\GroupPolicy\User\Scripts\Logon
+</code></pre><p>我把刚才保存的DPI_FIX.cmd放入到这个文件夹中。最后保存</p>
+<p>为什么要把cmd放到登录脚本呢?一般的教程是放到启动文件夹，这样只能保证在window启动的时候自动运行cmd脚本。当计算机睡眠，注销的时候，放到启动中的脚本并不会运行，所以把这个放到登录脚本就可以了</p>
+<p>上面的语句第一句不知道什么意思。第二句把dpi模式设置为win8的传统模式，第三句设置缩放大小</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/30/改变谷歌浏览器记住密码后input框黄色背景/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1464,7 +1592,7 @@ forever list
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
