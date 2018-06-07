@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="getComputedStyle()方法会获取元素计算后的样式，它获取的是只读属性，无法被改变。 position: absolute;属性会改变元素的display属性。比如会把行内元素改为块级元素。这个时候用getComputedStyle()方法获取行内元素的display属性的时候就是block了。用.style.display获取的依然是一个行内元素">
+<meta name="description" content="1.新建一个存放mongodb数据库的文件夹，命名为mydatabase2.在mydatabase文件夹下新建配置文件，命名为 mongod.conf，文本内容如下： storage:     dbPath: ./ net:     bindIp: 0.0.0.0     port: 27019 dbPath是数据库路径，因为配置文件放在了数据库根目录下面，所以路径就是当前目录。bindIp我设置">
 <meta property="og:type" content="article">
-<meta property="og:title" content="getComputedStyle()方法">
-<meta property="og:url" content="http://yoursite.com/2018/01/26/getComputedStyle-方法/index.html">
+<meta property="og:title" content="mongodb使用配置文件启动方法">
+<meta property="og:url" content="http://yoursite.com/2018/06/07/mongodb使用配置文件启动方法/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="getComputedStyle()方法会获取元素计算后的样式，它获取的是只读属性，无法被改变。 position: absolute;属性会改变元素的display属性。比如会把行内元素改为块级元素。这个时候用getComputedStyle()方法获取行内元素的display属性的时候就是block了。用.style.display获取的依然是一个行内元素">
+<meta property="og:description" content="1.新建一个存放mongodb数据库的文件夹，命名为mydatabase2.在mydatabase文件夹下新建配置文件，命名为 mongod.conf，文本内容如下： storage:     dbPath: ./ net:     bindIp: 0.0.0.0     port: 27019 dbPath是数据库路径，因为配置文件放在了数据库根目录下面，所以路径就是当前目录。bindIp我设置">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-26T15:51:27.671Z">
+<meta property="og:updated_time" content="2018-06-07T15:47:53.804Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="getComputedStyle()方法">
-<meta name="twitter:description" content="getComputedStyle()方法会获取元素计算后的样式，它获取的是只读属性，无法被改变。 position: absolute;属性会改变元素的display属性。比如会把行内元素改为块级元素。这个时候用getComputedStyle()方法获取行内元素的display属性的时候就是block了。用.style.display获取的依然是一个行内元素">
+<meta name="twitter:title" content="mongodb使用配置文件启动方法">
+<meta name="twitter:description" content="1.新建一个存放mongodb数据库的文件夹，命名为mydatabase2.在mydatabase文件夹下新建配置文件，命名为 mongod.conf，文本内容如下： storage:     dbPath: ./ net:     bindIp: 0.0.0.0     port: 27019 dbPath是数据库路径，因为配置文件放在了数据库根目录下面，所以路径就是当前目录。bindIp我设置">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/26/getComputedStyle-方法/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/07/mongodb使用配置文件启动方法/"/>
 
 
 
 
 
-  <title>getComputedStyle()方法 | </title>
+  <title>mongodb使用配置文件启动方法 | </title>
   
 
 
@@ -242,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/26/getComputedStyle-方法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/07/mongodb使用配置文件启动方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="duan">
@@ -259,7 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">getComputedStyle()方法</h1>
+          <h1 class="post-title" itemprop="name headline">mongodb使用配置文件启动方法</h1>
         
 
         <div class="post-meta">
@@ -271,8 +271,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-26T23:06:55+08:00">
-                2018-01-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-07T23:40:51+08:00">
+                2018-06-07
               </time>
             
 
@@ -309,10 +309,13 @@
       
 
       
-        <ol>
-<li><font style="font-weight: 600">getComputedStyle()方法会获取元素计算后的样式，它获取的是只读属性，无法被改变。</font></li>
-<li>position: absolute;属性会改变元素的display属性。比如会把行内元素改为块级元素。这个时候用getComputedStyle()方法获取行内元素的display属性的时候就是block了。用.style.display获取的依然是一个行内元素</li>
-</ol>
+        <p>1.新建一个存放mongodb数据库的文件夹，命名为mydatabase<br>2.在mydatabase文件夹下新建配置文件，命名为 mongod.conf，文本内容如下：</p>
+<pre><code>storage:
+    dbPath: ./
+net:
+    bindIp: 0.0.0.0
+    port: 27019
+</code></pre><p>dbPath是数据库路径，因为配置文件放在了数据库根目录下面，所以路径就是当前目录。bindIp我设置成了允许外网访问。</p>
 
       
     </div>
@@ -337,8 +340,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/26/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/06/02/win10连接服务器提示要求的函数不受支持/" rel="next" title="win10连接服务器提示要求的函数不受支持">
+                <i class="fa fa-chevron-left"></i> win10连接服务器提示要求的函数不受支持
               </a>
             
           </div>
@@ -346,10 +349,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/22/gitignore无法忽略已经被提交过了的文件的解决方案/" rel="prev" title=".gitignore无法忽略已经被提交过了的文件的解决方案">
-                .gitignore无法忽略已经被提交过了的文件的解决方案 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
